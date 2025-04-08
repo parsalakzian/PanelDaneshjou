@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ورود به سیستم جامع دانشگاهی</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 300px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            margin-top: 20px;
+            align-items: center;
+            align-content: center;
+            justify-items: center;
+            justify-content: center;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            align-self: center;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .captcha {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .captcha img {
+            width: 150px;
+            height: 50px;
+        }
+        .captcha input {
+            width: 150px;
+            padding: 10px;
+            margin-left: 10px;
+        }
+        /* Styles for error message */
+        .error-message {
+            color: red;
+            margin-bottom: 10px;
+        }
+        /* Loading spinner styles */
+        .loading {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .loading-spinner {
+            border: 4px solid #f3f3f3; /* Light grey */
+            border-top: 4px solid #3498db; /* Blue */
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>دانشگاه زنجان</h1>
+        <h2>سیستم جامع دانشگاهی گلستان</h2>
+        <!-- Error Message -->
+        <div id="error-message" class="error-message"></div>
+        <form id="login-form">
+            <input type="text" placeholder="شناسه کاربری" dir="rtl" id="username">
+            <input type="password" placeholder="گذرواژه" dir="rtl" id="password">
+            <button type="submit">ورود</button>
+            <a href="https://golestan.znu.ac.ir/forms/f0205_process_ssogov/auth.aspx?rsc=110" style="color: #007bff; text-decoration: underline;">ورود از طریق احراز هویت مرکزی</a>
+        </form>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div id="loading" class="loading">
+        <div class="loading-spinner"></div>
+        <p>لودینگ...</p>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Correct credentials
+            const correctUsername = '8512953828';
+            const correctPassword = '4901414127';
+
+            if (username === correctUsername && password === correctPassword) {
+                // Show loading spinner
+                document.getElementById('loading').style.display = 'block';
+
+                // Simulate a delay before redirecting (e.g., 2 seconds)
+                setTimeout(function() {
+                    window.location.href = '/پنل_تحصیلی'; // Redirect to dashboard page
+                }, 2000);
+            } else {
+                // Display error message
+                document.getElementById('error-message').textContent = 'مشخصات وارد شده در سامانه وجود ندارد. (در صورت اطمینان از صحت اطلاعات به بخش سامانه‌های انلاین دانشگاه مراجعه نمایید.)';
+            }
+        });
+    </script>
+</body>
+</html>

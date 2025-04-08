@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پنل کاربری</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        .term-section {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+        }
+        .term-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .course-table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        .course-table th,
+        .course-table td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        .course-table th {
+            background-color: #f2f2f2;
+        }
+        .hostel-info {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+        }
+        .payment-table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        .payment-table th,
+        .payment-table td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        .payment-table th {
+            background-color: #f2f2f2;
+        }
+        @media (max-width: 600px) {
+            .course-table,
+            .payment-table {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>سيستم جامع دانشگاهي گلستان (دانشگاه زنجان)</h1>
+        <p><strong>نام دانشجو:</strong> پارسا لکزیان</p>
+        <p><strong>کد ملی دانشجو:</strong>۴۹۰۱۴۱۴۱۲۷</p>
+
+        <!-- Tabs Navigation -->
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="academic-tab" data-bs-toggle="tab" href="#academic" role="tab" aria-controls="academic" aria-selected="true">وضعیت تحصیلی</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="hostel-tab" data-bs-toggle="tab" href="#hostel" role="tab" aria-controls="hostel" aria-selected="false">وضعیت خوابگاه</a>
+            </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div class="tab-content" id="myTabContent">
+            <!-- Tab for Academic Status -->
+            <div class="tab-pane fade show active" id="academic" role="tabpanel" aria-labelledby="academic-tab">
+                <h2>وضعیت تحصیلی</h2>
+
+                <!-- Term 1 -->
+                <div class="term-section">
+                    <h3>ترم ۱ (نمیه اول ۱۴۰۳ - ۱۴۰۴)</h3>
+                    <div class="term-info">
+                        <span>تعداد واحد‌های پاس شده: ۱۸</span>
+                        <span>تعداد دروس پاس شده: ۸</span>
+                    </div>
+                    <table class="course-table">
+                        <thead>
+                            <tr>
+                                <th>نام درس</th>
+                                <th>تعداد واحد</th>
+                                <th>نمره اخذ شده</th>
+                                <th>نام مدرس</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ریاضیات عمومی ۱ (پاس شده)</td>
+                                <td>۴</td>
+                                <td>۲۰</td>
+                                <td>دکتر فریدون انیسه</td>
+                            </tr>
+                            <tr>
+                                <td>مبانی ریاضی مقدماتی (پاس شده)</td>
+                                <td>۲</td>
+                                <td>۲۰</td>
+                                <td>دکتر فریدون انیسه</td>
+                            </tr>
+                            <tr>
+                                <td>فیزیک عمومی ۱ (پاس شده)</td>
+                                <td>۳</td>
+                                <td>۱۸.۷۵</td>
+                                <td>دکتر حسن بیات</td>
+                            </tr>
+                            <tr>
+                                <td>آمار و احتمال مقدماتی (پاس شده)</td>
+                                <td>۳</td>
+                                <td>۱۹.۵</td>
+                                <td>دکتر مهدی الوندی</td>
+                            </tr>
+                            <tr>
+                                <td>آزمایشگاه ریاضی ۱ (پاس شده)</td>
+                                <td>۱</td>
+                                <td>۲۰</td>
+                                <td>دکتر احمد مصطفوی</td>
+                            </tr>
+                            <tr>
+                                <td>آزمایشگاه فیزیک ۱ (پاس شده)</td>
+                                <td>۱</td>
+                                <td>۲۰</td>
+                                <td>دکتر محمد علیزاده</td>
+                            </tr>
+                            <tr>
+                                <td>زبان انگلیسی (پاس شده)</td>
+                                <td>۳</td>
+                                <td>۱۹</td>
+                                <td>دکتر علی اصغری</td>
+                            </tr>
+                            <tr>
+                                <td>تربیت بدنی (پاس شده)</td>
+                                <td>۱</td>
+                                <td>۱۸</td>
+                                <td>دکتر وحید طباطبایی</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Term 2 -->
+                <div class="term-section">
+                    <h3>ترم ۲ (نمیه اول ۱۴۰۳ - ۱۴۰۴) (دروه جاری) </h3>
+                    <div class="term-info">
+                        <span>تعداد واحد‌های پاس شده: -</span>
+                        <span>تعداد دروس پاس شده: -</span>
+                    </div>
+                    <table class="course-table">
+                        <thead>
+                            <tr>
+                                <th>نام درس</th>
+                                <th>تعداد واحد</th>
+                                <th>نمره</th>
+                                <th>نام مدرس</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ریاضیات عمومي (جاری)</td>
+                                <td>۲</td>
+                                <td>-</td>
+                                <td>دکتر فریدون انیسه</td>
+                            </tr>
+                            <tr>
+                                <td>مبانی کامپیوتر و برنامه سازی (جاری)</td>
+                                <td>۳</td>
+                                <td>-</td>
+                                <td>دکتر فریدون انیسه</td>
+                            </tr>
+                            <tr>
+                                <td>آزمایشگاه ریاضی ۲ (جاری)</td>
+                                <td>۱</td>
+                                <td>-</td>
+                                <td>دکتر احمد مصطفوی</td>
+                            </tr>
+                            <tr>
+                                <td>مبانی ماتریس ها و جبر خطی (جاری)</td>
+                                <td>۴</td>
+                                <td>-</td>
+                                <td>دکتر مهدی عباسی</td>
+                            </tr>
+                            <tr>
+                                <td>مبانی علوم ریاضی و آمار (جاری)</td>
+                                <td>۴</td>
+                                <td>-</td>
+                                <td>دکتر مهدی الوندی</td>
+                            </tr>
+                            <tr>
+                                <td>زبان فارسی (جاری)</td>
+                                <td>۳</td>
+                                <td>-</td>
+                                <td>دکتر شروین افزاینده</td>
+                            </tr>
+                            <tr>
+                                <td>تارخ و تمدن اسلامی (جاری)</td>
+                                <td>۱</td>
+                                <td>-</td>
+                                <td>دکتر علی اصغری</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Tab for Hostel Status -->
+            <div class="tab-pane fade" id="hostel" role="tabpanel" aria-labelledby="hostel-tab">
+                <h2>وضعیت خوابگاه</h2>
+                <div class="hostel-info">
+                    <p><strong>دارای خوابگاه:</strong> بله</p>
+                    <p><strong>نام خوابگاه:</strong> خوابگاه ناصربخت</p>
+                    <p><strong>واحد خوابگاه:</strong> ۳۰۲ (۴ تخت)</p>
+                </div>
+                <h3>پرداخت‌های شهریه خوابگاه</h3>
+                <table class="payment-table">
+                    <thead>
+                        <tr>
+                            <th>تاریخ پرداخت</th>
+                            <th>مبلغ پرداخت شده</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>۱۴۰۳/۱۰/۰۵</td>
+                            <td>۲۸۹,۷۵۰ تومان</td>
+                        </tr>
+                        <tr>
+                            <td>۱۴۰۳/۱۰/۱۰</td>
+                            <td>۲۸۹,۷۵۰ تومان</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
